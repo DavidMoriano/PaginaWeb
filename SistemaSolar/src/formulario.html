@@ -5,8 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="shortcut icon" href="../multimedia/SS.ico" type="image/x-icon">
+
 </head>
 <body>
+    <div class="headerIndex"> 
+        <h1 class="cabeceraIndex">Nuestro sistema Solar</h1>
+        <p class="editor"> By David Moriano </p>
+        <br>
+        <p class="informacionHeaderIndex"> En esta página Web voy a hablar sobre los distintos planetas del Sistema Solar, cometar un poco
+            sobre ellos, así como algunas curiosidades y noticias actualizadas
+        </p>
+    </div>
+
     
+    <form action="../src/index.html">
+        <fieldset>
+            <legend>Darse de alta</legend>
+
+                <label for="name">Nombre: </label>
+                <input type="text" name="Nombre" id="name" required>
+                <br>
+
+                <label for="surname">Apellidos: </label>
+                <input type="text" name="surname" id="surname" required>
+                <br>
+
+                <label for="dni">DNI: </label>
+                <input type="text" name="dni" id="dni" pattern="\d{8}[A-Z]" required>
+                <br>
+
+                <label for="dirección">Dirección: </label>
+                <input type="text" name="dirección" id="dirección" pattern="C\[A-Za-z\s]+ Nº\d+ Puerta\s[A-z]" required>
+                <br>
+
+                <label for="ciudad">Ciudad: </label>
+                <input type="text" name="ciudad" id="ciudad" required>
+                <br>
+
+                <label for="Codigop">Código postal</label>
+                <input type="text" name="Codigop" id="Codigop" pattern="\d{5}" list="CódigoPSugerencia" pattern required>
+                <datalist id="CódigoPSugerencia"> 
+                    <option value="37003"> </option>
+                    <option value="37001"> </option>
+                    <option value="37002"> </option>
+                    <option value="37004"> </option>
+                    <option value="37007"> </option>
+                </datalist>
+                <br>
+
+                <label for="país">País: </label>
+                <input type="text" name="país" id="país" required>
+                <br>
+
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                <br>
+
+                <label for="email">Email: </label>
+                <input type="email" name="correo" id="email" pattern="[A-Za-Z|\d]+@[A-Za-Z|\d]">
+                <br>
+
+                <label for="contraseña">Contraseña: </label>
+                <input type="password" name="contraseña" id="contraseña" pattern="[A-Za-z]{7}[A-Za-z|\d]{5}\d{2}" required>
+                <br>
+
+
+                <label id="labelForSexo" for="sexo">Sexo: </label>
+                <label for="sexo_hombre">Hombre</label>
+                <input type="radio" id="sexo_hombre" class="sexo" name="sexo" required>
+                <label for="sexo_mujer">Mujer</label>
+                <input type="radio" id="sexo_mujer" class="sexo" name="sexo" required>
+                <label for="sexo_otro">Otro</label>
+                <input type="radio" id="sexo_otro" class="sexo" name="sexo" required>
+                <br>
+
+                <label for="Aficiones">Aficiones </label>
+                <input type="text" name="Aficiones" id="Aficiones" required list="AficionesSugerencias">
+                <datalist id="AficionesSugerencias"> 
+                    <option value="Leer"> </option>
+                    <option value="Hacer Ejercicio"> </option>
+                    <option value="Música"> </option>
+                    <option value="Dormir"> </option>
+                    <option value="Ver películas"> </option>
+                </datalist>
+                <br>
+
+                <label for="fotoUsuario">Sube una foto:</label>
+                <input type="file" id="fotoUsuario" name="fotoUsuario">
+                <br>
+                
+                <input type="submit" value="ENVIAR">
+                <input type="reset" value="BORRAR">
+                <input type="button" onclick="location.href='index.html'" value=CANCELAR>
+                <br>
+                <br>
+        </fieldset>
+    </form>
+
+    <div class="informacionFooterIndex">
+        <img id="iconoCorreo" src="../multimedia/correo.png" alt="icono de correo electrónico">
+        <p> davidmcon2004@gmail.com</p>
+    </div>
+ 
+
 </body>
 </html>

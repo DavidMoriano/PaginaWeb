@@ -4,7 +4,6 @@ body{
     background-position: cover;
 }
 
-
 *{
     font-family: 'Courier New', Courier, monospace;
     padding: 0;
@@ -21,16 +20,18 @@ body{
     margin-bottom: 20px;
     border:2px solid rgb(0, 0, 255, 0.2);
     position: fixed;
+    z-index: 9;
 }
 
 .cabeceraIndex{
     font-size: 80px;
+    
 }
 
 .editor {
     text-align: center;
     font-size: 40px;
-    
+
 }
 
 .menuDesplegable{
@@ -84,7 +85,7 @@ body{
 
 .anuncionIzquierda{
     width: 300px;
-    height: 210vh;
+    height: 270vh;
 }
 
 .anuncios2Index {
@@ -95,17 +96,32 @@ body{
 
 .anuncioDerecha{
     width: 300px;
-    height: 210vh;
+    height: 270vh;
     background-color: lightblue;
+}
+
+.contenedorVideoInformacionIndex{
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#videoInformacionIndex{
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
 }
 
 .informacionPrincipalIndex{
     text-align: justify;
     margin: auto;
     background-color: rgb(125, 160, 202, 0.4);
-    height: 1000px;
+    height: 1600px;
     width: 60%;
     padding: 30px;
+    border-radius: 3rcap;
+
 }
 
 .informacionIndex{
@@ -113,6 +129,8 @@ body{
     padding: 30px;
     background-color: beige;
     color: black;
+    border-radius: 3rcap;
+
 }
 
 .imagenFooterIndex{
@@ -125,7 +143,9 @@ body{
     width: 60%;
     height: 55vh;
     border: 2px solid white; 
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
+    border-radius: 3rcap;
+  
 }
 
 .informacionHeaderIndex{
@@ -133,6 +153,8 @@ body{
     width: 60%;
     margin: auto;
     margin-bottom: 20px;
+    border-radius: 3rcap;
+
 }
 
 .informacionFooterIndex{
@@ -143,10 +165,66 @@ body{
     left: 25%;
     right: 25%;
     bottom: 0;
+    z-index: 10;
 }
 
 #iconoCorreo{
     width: 50px;
     height: 50px;
     border: 2px solid white;
+    border-radius: 3rcap;
+
 }
+
+form{
+    position: absolute;
+    right: 15%;
+    padding: 20px;
+    border-radius: 3rcap;
+    background-color: rgb(111, 65, 0, 0.7);
+    font-size: 30px;
+    margin-top: 240px;
+    margin-bottom: 100px;
+    z-index: 5;
+    width: 70%;
+    text-align: center;
+}
+
+fieldset{
+    padding: 20px;
+}
+
+form label:not([for^="sexo_"]) {
+    text-align:left;
+    display: inline-block;
+    width: 400px;
+}
+
+input {
+    margin: 20px;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.contenedorfotoFormulario {
+    text-align: center;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 1500px;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+
+#fotoUsuario{
+    color: white;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+            opacity: 0.4;
+        }
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+            background-color: #7DA0CA;
+        }
